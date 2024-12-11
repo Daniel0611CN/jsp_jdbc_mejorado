@@ -26,7 +26,7 @@
         //CARGA DEL DRIVER Y PREPARACIÓN DE LA CONEXIÓN CON LA BBDD
         //						v---------UTILIZAMOS LA VERSIÓN MODERNA DE LLAMADA AL DRIVER, no deprecado
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto", "root", "user");
+        Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto_servlet", "root", "root");
 
         Connection conn = null;
         PreparedStatement ps = null;
@@ -37,7 +37,7 @@
             //CARGA DEL DRIVER Y PREPARACIÓN DE LA CONEXIÓN CON LA BBDD
             //						v---------UTILIZAMOS LA VERSIÓN MODERNA DE LLAMADA AL DRIVER, no deprecado
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto", "root", "user");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto_servlet", "root", "root");
 
 
 //>>>>>>NO UTILIZAR STATEMENT EN QUERIES PARAMETRIZADAS
@@ -90,8 +90,33 @@
                 <%= nombre%>
             </td>
         </tr>
+        <tr>
+            <td>
+                Estatura
+            </td>
+            <td>
+                <%= estatura%>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Edad
+            </td>
+            <td>
+                <%= edad%>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Localidad
+            </td>
+            <td>
+                <%= localidad%>
+            </td>
+        </tr>
     </table>
 
+    <button><a href="index.jsp">Volver a Inicio</a></button>
 
 <%
 
